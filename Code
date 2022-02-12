@@ -1,0 +1,14 @@
+setwd("C:/Users/Md. Mohiuddin/Desktop/R/Project")
+getwd()
+ecoper = import("R_EcoPer_SS.xls")
+install.packages("rio")
+stargazer::stargazer(capm4, type="text",title = "Table-1:Summary Statistics", out="table1.text")
+stargazer::stargazer(MSFT,GE,GM,IBM,DIS,XOM,type="text",title = "CAPM4 MODEL",column.labels = c("MSFT","GE","GM", "IBM","DIS","XOM"),covariate.labels = c("Risk Premium on MKT P","Intercept"),dep.var.labels =c("Risk Premium ","Risk Premium ","Risk Premium ","Risk Premium ","Risk Premium ","Risk Premium ")
+
+
+
+
+
+plot(capm$mktP,capm$ms)
+abline(MSFT, col = "red")
+hist(cps$wage,main = "Wage Histogram",freq = FALSE)
